@@ -9,7 +9,7 @@
 #include "VideoManager.h"
 #include <gl/glew.h>
 
-VideoManager *VideoManager::window = nullptr;
+VideoManager *VideoManager::m_video = nullptr;
 
 VideoManager::VideoManager(int width, int height, const std::string& title)
 :   m_width(width)
@@ -56,20 +56,36 @@ VideoManager::~VideoManager()
 
 void VideoManager::starUp()
 {
-    get(640, 480, "L_Engine");
+
 }
 
 void VideoManager::shutDown()
 {
-    SDL_GL_DeleteContext(window->m_glContext);
-    SDL_DestroyWindow(window->m_window);
+    SDL_GL_DeleteContext(m_video->m_glContext);
+    SDL_DestroyWindow(m_video->m_window);
     SDL_Quit();
 }
 
 VideoManager* VideoManager::get(int width, int height, const std::string& title)
 {
-    if (!window) {
-        window = new VideoManager(width, height, title);
+    if (!m_video) {
+        m_video = new VideoManager(width, height, title);
     }
-    return window;
+    return m_video;
+}
+
+void VideoManager::update()
+{
+    SDL_Event e;
+    while (SDL_PollEvent(&e)) {
+        //do something
+        if (e.type == SDL_QUIT) {
+            m_isCloseRequested = true;
+        }
+    }
+}
+
+void VideoManager::swapBuffers()
+{
+    SDL_GL_SwapWindow(m_window);
 }

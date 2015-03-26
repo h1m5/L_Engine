@@ -20,9 +20,8 @@ VideoManager gVideoManager;
 
 int main(int argc, const char * argv[]) {
     MemoryManager *gMemoryManager = MemoryManager::get();
-    gVideoManager.starUp();
-//    gTextureManager.startUp();
-//    gRenderManager.startUp();
+    gVideoManager = *VideoManager::get(640, 480, "L_Engine");
+    gRenderManager = *RenderManager::get();
     
     cout << "hello world\n";
     
@@ -31,13 +30,14 @@ int main(int argc, const char * argv[]) {
     
     unsigned *mem = NULL;
     
-    char x;
-    while (x != 'x') {
+    while (!gVideoManager.isCloseRequested()) {
         if (mem == NULL) {
             mem = reinterpret_cast<unsigned *>(alloc->Allocate());
         }
         *mem = 0u;
-        cin >> x;
+        gRenderManager.render();
+        gVideoManager.update();
+        gVideoManager.swapBuffers();
     }
     
     alloc->Free(mem);

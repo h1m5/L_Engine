@@ -14,7 +14,7 @@
 #include <SDL2/SDL.h>
 
 class VideoManager {
-    static VideoManager *window;
+    static VideoManager *m_video;
     int m_width;
     int m_height;
     std::string m_title;
@@ -27,6 +27,10 @@ public:
     ~VideoManager();
     void starUp();
     void shutDown();
+    void update();
+    void swapBuffers();
+    inline bool isCloseRequested() const { return m_isCloseRequested; }
+    SDL_Window *getWindow() {return m_window;}
     static VideoManager *get(int width, int height, const std::string& title);
 };
 

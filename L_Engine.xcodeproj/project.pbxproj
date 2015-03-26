@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		38E7B1FA1AC24A1B0004A2A2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B1F91AC24A1B0004A2A2 /* main.cpp */; };
 		38E7B2021AC24A5B0004A2A2 /* RenderManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B2001AC24A5B0004A2A2 /* RenderManager.cpp */; };
-		38E7B2061AC24BAE0004A2A2 /* VideoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B2041AC24BAE0004A2A2 /* VideoManager.cpp */; };
 		38E7B2091AC24CDC0004A2A2 /* TextureManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B2071AC24CDC0004A2A2 /* TextureManager.cpp */; };
 		38E7B20C1AC24F520004A2A2 /* MemoryManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B20A1AC24F520004A2A2 /* MemoryManager.cpp */; };
 		38E7B20F1AC24F9F0004A2A2 /* AnimationManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B20D1AC24F9F0004A2A2 /* AnimationManager.cpp */; };
@@ -26,6 +25,8 @@
 		38E7B2341AC3D6850004A2A2 /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38E7B2331AC3D6850004A2A2 /* OpenGL.framework */; };
 		38E7B2391AC3D7060004A2A2 /* Mesh.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B2351AC3D7060004A2A2 /* Mesh.cpp */; };
 		38E7B23A1AC3D7060004A2A2 /* Model.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B2371AC3D7060004A2A2 /* Model.cpp */; };
+		38E7B23E1AC3ED1F0004A2A2 /* VideoManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B23C1AC3ED1F0004A2A2 /* VideoManager.cpp */; };
+		38E7B2411AC3F7A50004A2A2 /* CoreSystem.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 38E7B23F1AC3F7A50004A2A2 /* CoreSystem.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -45,8 +46,6 @@
 		38E7B1F91AC24A1B0004A2A2 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		38E7B2001AC24A5B0004A2A2 /* RenderManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = RenderManager.cpp; sourceTree = "<group>"; };
 		38E7B2011AC24A5B0004A2A2 /* RenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RenderManager.h; sourceTree = "<group>"; };
-		38E7B2041AC24BAE0004A2A2 /* VideoManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = VideoManager.cpp; path = ../VideoManager.cpp; sourceTree = "<group>"; };
-		38E7B2051AC24BAE0004A2A2 /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = VideoManager.h; path = ../VideoManager.h; sourceTree = "<group>"; };
 		38E7B2071AC24CDC0004A2A2 /* TextureManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = TextureManager.cpp; sourceTree = "<group>"; };
 		38E7B2081AC24CDC0004A2A2 /* TextureManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TextureManager.h; sourceTree = "<group>"; };
 		38E7B20A1AC24F520004A2A2 /* MemoryManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = MemoryManager.cpp; sourceTree = "<group>"; };
@@ -73,6 +72,10 @@
 		38E7B2361AC3D7060004A2A2 /* Mesh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Mesh.h; sourceTree = "<group>"; };
 		38E7B2371AC3D7060004A2A2 /* Model.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Model.cpp; sourceTree = "<group>"; };
 		38E7B2381AC3D7060004A2A2 /* Model.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Model.h; sourceTree = "<group>"; };
+		38E7B23C1AC3ED1F0004A2A2 /* VideoManager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = VideoManager.cpp; sourceTree = "<group>"; };
+		38E7B23D1AC3ED1F0004A2A2 /* VideoManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VideoManager.h; sourceTree = "<group>"; };
+		38E7B23F1AC3F7A50004A2A2 /* CoreSystem.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = CoreSystem.cpp; sourceTree = "<group>"; };
+		38E7B2401AC3F7A50004A2A2 /* CoreSystem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreSystem.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,12 +123,14 @@
 				38E7B1F91AC24A1B0004A2A2 /* main.cpp */,
 				38E7B20A1AC24F520004A2A2 /* MemoryManager.cpp */,
 				38E7B20B1AC24F520004A2A2 /* MemoryManager.h */,
+				38E7B23F1AC3F7A50004A2A2 /* CoreSystem.cpp */,
+				38E7B2401AC3F7A50004A2A2 /* CoreSystem.h */,
 				38E7B2101AC24FA70004A2A2 /* FileSystemManager.cpp */,
 				38E7B2111AC24FA70004A2A2 /* FileSystemManager.h */,
 				38E7B2131AC24FBB0004A2A2 /* PhysicsManager.cpp */,
 				38E7B2141AC24FBB0004A2A2 /* PhysicsManager.h */,
-				38E7B23B1AC3DB430004A2A2 /* ResourseManager */,
 				38E7B2031AC24A650004A2A2 /* Renderer */,
+				38E7B23B1AC3DB430004A2A2 /* ResourseManager */,
 			);
 			path = L_Engine;
 			sourceTree = "<group>";
@@ -133,10 +138,10 @@
 		38E7B2031AC24A650004A2A2 /* Renderer */ = {
 			isa = PBXGroup;
 			children = (
+				38E7B23C1AC3ED1F0004A2A2 /* VideoManager.cpp */,
+				38E7B23D1AC3ED1F0004A2A2 /* VideoManager.h */,
 				38E7B20D1AC24F9F0004A2A2 /* AnimationManager.cpp */,
 				38E7B20E1AC24F9F0004A2A2 /* AnimationManager.h */,
-				38E7B2041AC24BAE0004A2A2 /* VideoManager.cpp */,
-				38E7B2051AC24BAE0004A2A2 /* VideoManager.h */,
 				38E7B2011AC24A5B0004A2A2 /* RenderManager.h */,
 				38E7B2001AC24A5B0004A2A2 /* RenderManager.cpp */,
 				38E7B2071AC24CDC0004A2A2 /* TextureManager.cpp */,
@@ -221,13 +226,14 @@
 				38E7B20F1AC24F9F0004A2A2 /* AnimationManager.cpp in Sources */,
 				38E7B23A1AC3D7060004A2A2 /* Model.cpp in Sources */,
 				38E7B2151AC24FBB0004A2A2 /* PhysicsManager.cpp in Sources */,
+				38E7B23E1AC3ED1F0004A2A2 /* VideoManager.cpp in Sources */,
 				38E7B2121AC24FA70004A2A2 /* FileSystemManager.cpp in Sources */,
 				38E7B20C1AC24F520004A2A2 /* MemoryManager.cpp in Sources */,
 				38E7B2271AC2FEE30004A2A2 /* Shader.cpp in Sources */,
+				38E7B2411AC3F7A50004A2A2 /* CoreSystem.cpp in Sources */,
 				38E7B1FA1AC24A1B0004A2A2 /* main.cpp in Sources */,
 				38E7B2391AC3D7060004A2A2 /* Mesh.cpp in Sources */,
 				38E7B2021AC24A5B0004A2A2 /* RenderManager.cpp in Sources */,
-				38E7B2061AC24BAE0004A2A2 /* VideoManager.cpp in Sources */,
 				38E7B2091AC24CDC0004A2A2 /* TextureManager.cpp in Sources */,
 				38E7B2181AC28B000004A2A2 /* ResourceManager.cpp in Sources */,
 				38E7B2281AC2FEE30004A2A2 /* Texture.cpp in Sources */,

@@ -37,7 +37,6 @@ int main(int argc, const char * argv[]) {
         *mem = 0u;
         gRenderManager.render();
         gVideoManager.update();
-        gVideoManager.swapBuffers();
     }
     
     alloc->Free(mem);

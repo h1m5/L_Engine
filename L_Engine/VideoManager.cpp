@@ -83,6 +83,7 @@ void VideoManager::update()
             m_isCloseRequested = true;
         }
     }
+    swapBuffers();
 }
 
 void VideoManager::swapBuffers()

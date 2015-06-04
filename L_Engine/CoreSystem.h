@@ -11,4 +11,12 @@
 
 #include <stdio.h>
 
+class CoreSystem {
+    
+    
+public:
+    
+};
+
+
 #endif /* defined(__L_Engine__CoreSystem__) */

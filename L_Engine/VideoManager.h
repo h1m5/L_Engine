@@ -31,6 +31,8 @@ public:
     void swapBuffers();
     inline bool isCloseRequested() const { return m_isCloseRequested; }
     SDL_Window *getWindow() {return m_window;}
+    int getWindowWidth() { return m_width; }
+    int getWindowHeight() { return m_height; }
     static VideoManager *get(int width, int height, const std::string& title);
 };
 
